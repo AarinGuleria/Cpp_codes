@@ -1,3 +1,2 @@
-else{
-        //     cout<<"No unique number"<<endl;
-        // }
+cout<<endl;
+    // cout<<"Maximum number is: "<<<<endl;
