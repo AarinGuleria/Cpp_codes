@@ -1,4 +1,4 @@
-// find the second largest element in the given array.
+// find the second largest element in the given array.(when the array has unique elements)
 
 #include <iostream>
 using namespace std;
