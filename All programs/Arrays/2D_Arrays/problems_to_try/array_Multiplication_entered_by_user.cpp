@@ -26,25 +26,25 @@ int main() {
 
   if (c1 != r2) {
     cout << "Multiplication not possible" << endl;
-  }
-
-  int C[r1][c2];
-  for (int i = 0; i < r1; i++) {
-    for (int j = 0; j < c2; j++) {
-      int value = 0;
-      for (int k = 0; k < c1 ; k++) { // k<r2 can also be used
-        value += A[i][k] * B[k][j];
+  } else {
+    int C[r1][c2];
+    for (int i = 0; i < r1; i++) {
+      for (int j = 0; j < c2; j++) {
+        int value = 0;
+        for (int k = 0; k < c1; k++) {  // k<r2 can also be used
+          value += A[i][k] * B[k][j];
+        }
+        C[i][j] = value;
       }
-      C[i][j] = value;
     }
-  }
 
-  // displaying the resultant C matrix
-  for (int i = 0; i < r1; i++) {
-    for (int j = 0; j < c2; j++) {
-      cout << C[i][j] << " ";
+    // displaying the resultant C matrix
+    for (int i = 0; i < r1; i++) {
+      for (int j = 0; j < c2; j++) {
+        cout << C[i][j] << " ";
+      }
+      cout << endl;
     }
-    cout << endl;
   }
   return 0;
 }
