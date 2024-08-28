@@ -25,14 +25,15 @@ int main() {
   }
 
   if (c1 != r2) {
-    cout << "Multiplication not possible" << endl;
+    cout << "Array Multiplication not possible" << endl;
   } else {
     int C[r1][c2];
     for (int i = 0; i < r1; i++) {
       for (int j = 0; j < c2; j++) {
         int value = 0;
         for (int k = 0; k < c1; k++) {  // k<r2 can also be used
-          value += A[i][k] * B[k][j];
+          value += A[i][k] * B[k][j]; 
+          //here i and j are fixed for particular row and column and k is used to traverse through that particular row and column.
         }
         C[i][j] = value;
       }

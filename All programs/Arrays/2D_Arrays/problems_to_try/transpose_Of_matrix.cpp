@@ -1,4 +1,4 @@
-// Write a program to display transpose of a mtrix entered by the user.
+// Write a program to display transpose of a matrix entered by the user.
 
 #include <iostream>
 using namespace std;
