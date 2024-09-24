@@ -5,7 +5,7 @@
 /*
     matrix[] = {{0 1 1 1},
                 {0 0 0 1},
-                {0 0 0 1}}
+                {0 0 1 1}}
 
     Output: 0
 */
@@ -13,6 +13,29 @@
 using namespace std;
 #include<vector>
 #include<climits>
+
+int leftMostOneRow(vector<vector<int> >&V){
+  int leftMostOne = -1;
+  int maxOnesRow = -1;
+  int j = V[0].size()-1; //j is column, i is row represents 
+
+  //finding leftmost one in the 0th row
+  while(j>=0 && V[0][j]==1){
+    leftMostOne = j;
+    maxOnesRow = 0;
+    j--;
+  }
+
+  //check in the rest of the rowa if we can find a one left to the leftmost
+  for(int i=1; i<V.size(); i++){
+    while(j>=0 && V[i][j]==1){
+      leftMostOne = j;
+      maxOnesRow = i;
+      j--;
+    }
+  }
+  return maxOnesRow;
+}
 
 int maximumOnesRow(vector<vector<int> >&V) {
   int maxOnes = INT_MIN;
@@ -26,6 +49,7 @@ int maximumOnesRow(vector<vector<int> >&V) {
           maxOnes = numberOfOnes;
           maxOnesRow = i;
         }
+        break;
       }
     }
   }
