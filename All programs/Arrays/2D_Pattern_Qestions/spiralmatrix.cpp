@@ -1,4 +1,4 @@
-// Given an (n x m) matrix 'a, return all elements of the matrix in spiral order
+// Given an (n x m) matrix 'a', return all elements of the matrix in spiral order
 
 // 1 2 3
 // 4 5 6
