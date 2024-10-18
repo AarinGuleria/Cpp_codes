@@ -7,7 +7,7 @@ int main(){
     cin>>s;
     int n=s.size();
 
-    //prestoring
+    //prestoring int the hash array 
     int hash[26]={0};
     for(int i=0; i<n; i++){
         hash[s[i]- 'A']+=1;
