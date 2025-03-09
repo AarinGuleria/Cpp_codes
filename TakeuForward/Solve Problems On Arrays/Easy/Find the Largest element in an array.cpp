@@ -35,6 +35,18 @@ int main() {
     return 0;
 }
 
+// Optimized Approach (Finding Max Without Sorting)
+// Since we only need the largest element, we can avoid sorting altogether by using max_element(), which runs in O(n):
+
+// cpp
+// Copy
+// Edit
+// int findMax(vector<int>& arr) {
+//     return *max_element(arr.begin(), arr.end()); // O(n)
+// }
+// New Complexity: O(n) (linear time), which is better than O(n log n).
+
+
 
 // Output:
 
